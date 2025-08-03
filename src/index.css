@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --main-clr: #2a614c;
+  --white-clr: #eff2f1;
+  --LightGrey-clr: #e6e6e6;
+  --darkGrey-clr: #2f2f2f;
+  --second-clr: #e49a5f;
+}
+::selection {
+  background-color: var(--main-clr);
+  color: var(--color-white);
+}
+/*!INFO: Own Framework */
+.accent-clr {
+  color: var(--main-clr);
+}
+.bg-main {
+  background-color: var(--LightGrey-clr);
+}
+
+body {
+  background-color: var(--LightGrey-clr);
+  font-family: "Tajawal", sans-serif;
+}
+.loaderWrapper {
+  position: absolute;
+  width: 15%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: var(--main-clr);
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-);
+  -webkit-transform: translateY(-);
+  -moz-transform: translateY(-);
+  -ms-transform: translateY(-);
+  -o-transform: translateY(-);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: loader 1s ease-in-out infinite;
+  -webkit-animation: loader 1s ease-in-out infinite;
+}
+
+/* !info: Products */
+.search-products::placeholder {
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+}
+.search-products:focus::placeholder {
+  opacity: 0;
+}
+
+/* !info: Footer */
+footer .footer-social li {
+  background-color: rgb(220, 229, 228);
+}
+footer .footer-social li:hover {
+  background-color: var(--main-clr);
+  color: var(--color-white);
+}
+/* !info: Animation */
+@keyframes loader {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
