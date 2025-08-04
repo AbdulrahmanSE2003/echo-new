@@ -9,11 +9,12 @@ import ProductDetails from "./pages/ProductsDetails";
 import Products from "./pages/Products";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 function App() {
   const location = useLocation();
 
-  const hideLayoutFor = ["/contact", "/login"];
+  const hideLayoutFor = ["/contact"];
 
   const shouldHideLayout = hideLayoutFor.includes(location.pathname);
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
-        <Route path="/thanks" element={<ThanksPage />} />
+        <Route path="/thanks" element={<Modal />} />
       </Routes>
       {!shouldHideLayout && <Footer />}
     </>
