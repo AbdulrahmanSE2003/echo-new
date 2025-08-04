@@ -16,6 +16,9 @@
 .accent-clr {
   color: var(--main-clr);
 }
+.bg-accent {
+  background-color: var(--main-clr);
+}
 .bg-main {
   background-color: var(--LightGrey-clr);
 }
@@ -23,6 +26,16 @@
 body {
   background-color: var(--LightGrey-clr);
   font-family: "Tajawal", sans-serif;
+}
+input::placeholder {
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+input:focus::placeholder {
+  opacity: 0;
 }
 .loaderWrapper {
   position: absolute;
@@ -90,6 +103,23 @@ body {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+}
+/* !info: Contact */
+.contact form input,
+textarea {
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: solid 2px #dddddd;
+  outline: none;
+  transition: border 0.4s ease-in-out;
+  -webkit-transition: border 0.4s ease-in-out;
+  -moz-transition: border 0.4s ease-in-out;
+  -ms-transition: border 0.4s ease-in-out;
+  -o-transition: border 0.4s ease-in-out;
+}
+.contact form input:focus,
+textarea:focus {
+  border-color: rgb(68, 68, 68);
 }
 /* !info: Footer */
 footer .footer-social li {
