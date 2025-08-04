@@ -26,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
+        <Route path="/thanks" element={<ThanksPage />} />
       </Routes>
       {!shouldHideLayout && <Footer />}
     </>
