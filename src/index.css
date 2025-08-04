@@ -68,17 +68,29 @@ body {
 }
 
 /* !info: Products */
-.search-products::placeholder {
+.search-products-input::placeholder {
   transition: opacity 0.3s ease;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
   -ms-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
 }
-.search-products:focus::placeholder {
+.search-products-input:focus::placeholder {
   opacity: 0;
 }
-
+.searchProduct button {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
 /* !info: Footer */
 footer .footer-social li {
   background-color: rgb(220, 229, 228);
